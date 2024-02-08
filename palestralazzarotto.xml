@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 5.2.1
+- https://www.phpmyadmin.net
+-
+- Host: 127.0.0.1
+- Creato il: Feb 08, 2024 alle 17:11
+- Versione del server: 10.4.28-MariaDB
+- Versione PHP: 8.2.4
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="palestralazzarotto" collation="utf8mb4_general_ci" charset="utf8mb4">
+            <pma:table name="assistenza">
+                CREATE TABLE `assistenza` (
+                  `id_assistenza` int(11) NOT NULL AUTO_INCREMENT,
+                  `username_ass` varchar(20) NOT NULL,
+                  `mail_ass` varchar(30) NOT NULL,
+                  `assistenza_richiesta` varchar(500) NOT NULL,
+                  PRIMARY KEY (`id_assistenza`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+            </pma:table>
+            <pma:table name="corso">
+                CREATE TABLE `corso` (
+                  `id_corso` int(10) NOT NULL AUTO_INCREMENT,
+                  `nome` varchar(255) NOT NULL,
+                  `tipologia` varchar(255) NOT NULL,
+                  `descrizione` varchar(500) DEFAULT NULL,
+                  `partecipanti` int(10) NOT NULL,
+                  `orario` datetime DEFAULT NULL,
+                  PRIMARY KEY (`id_corso`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=58 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+            </pma:table>
+            <pma:table name="utenti">
+                CREATE TABLE `utenti` (
+                  `id_utente` int(11) NOT NULL AUTO_INCREMENT,
+                  `username` varchar(20) NOT NULL,
+                  `password` varchar(30) NOT NULL,
+                  `nome` varchar(30) NOT NULL,
+                  `cognome` varchar(30) NOT NULL,
+                  `mail` varchar(40) NOT NULL,
+                  `data_nascita` date NOT NULL,
+                  `amministratore` tinyint(1) NOT NULL COMMENT &#039;1 = admin, 0 = no&#039;,
+                  PRIMARY KEY (`id_utente`),
+                  UNIQUE KEY `username` (`username`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'palestralazzarotto'
+    -->
+    <database name="palestralazzarotto">
+        <!-- Tabella assistenza -->
+        <table name="assistenza">
+            <column name="id_assistenza">1</column>
+            <column name="username_ass">c</column>
+            <column name="mail_ass">checco@gmail.com</column>
+            <column name="assistenza_richiesta">Nonostante io sia autenticato non mi fa vedere i corsi correttamente.                   
+                    </column>
+        </table>
+        <table name="assistenza">
+            <column name="id_assistenza">2</column>
+            <column name="username_ass">c</column>
+            <column name="mail_ass">sadasd@gmail.com</column>
+            <column name="assistenza_richiesta">Come funziona per iscriversi ai corsi? Posso iscrivermi la prima volta che vengo in palestra? </column>
+        </table>
+        <table name="assistenza">
+            <column name="id_assistenza">3</column>
+            <column name="username_ass">c</column>
+            <column name="mail_ass">checco@gmail.com</column>
+            <column name="assistenza_richiesta">Problema di gestione dati nel mio account, non mi permette di cambiare password o di cambiare username (errore di connessione, ma connessione funzionante)   </column>
+        </table>
+        <table name="assistenza">
+            <column name="id_assistenza">4</column>
+            <column name="username_ass">utente1</column>
+            <column name="mail_ass">mario@example.com</column>
+            <column name="assistenza_richiesta">Ho problemi a trovare  corsi sul sito. Quando tento di ricerca di  un corso, ricevo un errore che dice &quot;Errore di connessione con il server&quot;. Ho già provato a cancellare i cookie del mio browser, ma il problema persiste.</column>
+        </table>
+        <table name="assistenza">
+            <column name="id_assistenza">5</column>
+            <column name="username_ass">utente2</column>
+            <column name="mail_ass">laura@example.com</column>
+            <column name="assistenza_richiesta">Nel mio profilo utente, non vedo l&#039;opzione per cambiare la mia password. Come posso aggiornarla?</column>
+        </table>
+        <table name="assistenza">
+            <column name="id_assistenza">6</column>
+            <column name="username_ass">utente3</column>
+            <column name="mail_ass">carlo@example.com</column>
+            <column name="assistenza_richiesta">Mi piacerebbe ricevere informazioni aggiuntive sui corsi di bodybuilding offerti. Vorrei sapere gli orari disponibili e se ci sono istruttori specializzati.</column>
+        </table>
+        <table name="assistenza">
+            <column name="id_assistenza">7</column>
+            <column name="username_ass">utente4</column>
+            <column name="mail_ass">sofia@example.com</column>
+            <column name="assistenza_richiesta">Ho dimenticato la mia password per accedere al sito. C&#039;è un modo per reimpostarla o recuperarla? Ho dovuto fare un altro account.</column>
+        </table>
+        <table name="assistenza">
+            <column name="id_assistenza">14</column>
+            <column name="username_ass">c</column>
+            <column name="mail_ass">checcolazza@gmail.com</column>
+            <column name="assistenza_richiesta">Non riesco a cambiare la mia password, la sessione area privata rimane in caricamento e non so come fare.                    
+                    </column>
+        </table>
+        <!-- Tabella corso -->
+        <table name="corso">
+            <column name="id_corso">19</column>
+            <column name="nome">Body Pump</column>
+            <column name="tipologia">Bodybuilding</column>
+            <column name="descrizione">Body Pump è un allenamento con i pesi che ti aiuterà a tonificare e rafforzare tutti i principali gruppi muscolari. Le sessioni includono esercizi con bilancieri e pesi liberi. Unisciti a noi ogni mercoledì e venerdì alle 17:30 per un allenamento completo del corpo.</column>
+            <column name="partecipanti">15</column>
+            <column name="orario">2023-10-18 17:30:00</column>
+        </table>
+        <table name="corso">
+            <column name="id_corso">20</column>
+            <column name="nome">Yoga Vinyasa</column>
+            <column name="tipologia">Yoga</column>
+            <column name="descrizione">Il corso di Yoga Vinyasa è una pratica dinamica che combina movimenti fluidi con la respirazione consapevole. Questo corso è progettato per migliorare la flessibilità, la forza e la calma mentale. Le lezioni si tengono ogni martedì e giovedì alle 10:30 per aiutarti a trovare l&#039;equilibrio tra corpo e mente.</column>
+            <column name="partecipanti">18</column>
+            <column name="orario">2023-10-17 10:30:00</column>
+        </table>
+        <table name="corso">
+            <column name="id_corso">21</column>
+            <column name="nome">Aerobica Ad Alto Impatto</column>
+            <column name="tipologia">Anaerobico</column>
+            <column name="descrizione">L&#039;aerobica ad alto impatto è un allenamento energico che coinvolge il movimento coordinato e coreografie. Questo corso ti farà sudare e bruciare calorie, migliorando la tua resistenza cardiovascolare. Unisciti a noi ogni martedì e giovedì alle 19:00 per un&#039;esperienza di fitness coinvolgente.</column>
+            <column name="partecipanti">25</column>
+            <column name="orario">2023-10-17 19:00:00</column>
+        </table>
+        <table name="corso">
+            <column name="id_corso">23</column>
+            <column name="nome">Pilates Matwork</column>
+            <column name="tipologia">Pilates</column>
+            <column name="descrizione">Il Pilates Matwork è una forma di allenamento che si concentra sulla forza del nucleo e sulla flessibilità. In questo corso, imparerai esercizi che puoi eseguire senza attrezzi speciali. Le lezioni si tengono ogni lunedì e mercoledì alle 16:30 per migliorare la postura e la forza.</column>
+            <column name="partecipanti">12</column>
+            <column name="orario">2023-10-16 16:30:00</column>
+        </table>
+        <table name="corso">
+            <column name="id_corso">24</column>
+            <column name="nome">Zumba Fitness</column>
+            <column name="tipologia">Dancing Fitness</column>
+            <column name="descrizione">Il corso di Zumba Fitness è un mix di balli e fitness che ti farà divertire mentre bruci calorie. Senti la musica e segui il ritmo. Le sessioni si tengono ogni mercoledì e venerdì alle 20:00 per una sessione di fitness danzante.</column>
+            <column name="partecipanti">20</column>
+            <column name="orario">2023-10-18 20:00:00</column>
+        </table>
+        <table name="corso">
+            <column name="id_corso">25</column>
+            <column name="nome">CrossFit Challenge</column>
+            <column name="tipologia">CrossFit</column>
+            <column name="descrizione">Unisciti alla sfida del CrossFit per migliorare la tua forza, resistenza e agilità. Questo corso combina esercizi funzionali ad alta intensità per darti una sfida completa. Lezioni disponibili ogni lunedì e gioveddì alle 17:00.</column>
+            <column name="partecipanti">18</column>
+            <column name="orario">2023-10-16 17:00:00</column>
+        </table>
+        <table name="corso">
+            <column name="id_corso">26</column>
+            <column name="nome">Hatha Yoga</column>
+            <column name="tipologia">Yoga</column>
+            <column name="descrizione">Il corso di Hatha Yoga è una pratica più lenta e riflessiva che si concentra su posture statiche e allungamento. Questo corso è ideale per rilassarsi e trovare la calma interiore. Partecipa ogni martedì e giovedì alle 16:00 per una pratica yoga tranquilla.</column>
+            <column name="partecipanti">15</column>
+            <column name="orario">2023-10-17 16:00:00</column>
+        </table>
+        <table name="corso">
+            <column name="id_corso">27</column>
+            <column name="nome">Piloxing Fusion</column>
+            <column name="tipologia">Fitness</column>
+            <column name="descrizione">Il Piloxing Fusion combina il Pilates con il pugilato per un allenamento completo del corpo. Rafforza il tuo nucleo e brucia calorie con il ritmo della musica. Unisciti a noi ogni mercoledì e venerdì alle 18:30 per questa esperienza unica.</column>
+            <column name="partecipanti">20</column>
+            <column name="orario">2023-10-18 18:30:00</column>
+        </table>
+        <table name="corso">
+            <column name="id_corso">28</column>
+            <column name="nome">Spinning Intenso</column>
+            <column name="tipologia">Fitness</column>
+            <column name="descrizione">Il corso di Spinning Intenso è un allenamento cardiovascolare ad alta intensità. Pedala e brucia calorie con musica motivante. Le sessioni si tengono ogni lunedì e gioveddì alle 19:30 per sfidare il tuo cardio.</column>
+            <column name="partecipanti">22</column>
+            <column name="orario">2023-10-16 19:30:00</column>
+        </table>
+        <table name="corso">
+            <column name="id_corso">29</column>
+            <column name="nome">Ginnastica per Anziani</column>
+            <column name="tipologia">Fitness</column>
+            <column name="descrizione">Questo corso di Ginnastica è progettato per gli anziani e si concentra su movimenti leggeri per mantenere la mobilità. Partecipa ogni martedì e giovedì alle 11:00 per rimanere attivo e in salute.</column>
+            <column name="partecipanti">10</column>
+            <column name="orario">2023-10-17 11:00:00</column>
+        </table>
+        <table name="corso">
+            <column name="id_corso">30</column>
+            <column name="nome">Danza Hip-Hop</column>
+            <column name="tipologia">Dancing Fitness</column>
+            <column name="descrizione">Il corso di Danza Hip-Hop è un&#039;esperienza di danza urbana. Impara i movimenti e balla al ritmo della musica hip-hop. Lezioni disponibili ogni mercoledì e venerdì alle 21:00.</column>
+            <column name="partecipanti">15</column>
+            <column name="orario">2023-10-18 21:00:00</column>
+        </table>
+        <table name="corso">
+            <column name="id_corso">31</column>
+            <column name="nome">Allenamento in Acqua</column>
+            <column name="tipologia">Fitness</column>
+            <column name="descrizione">L&#039;Allenamento in Acqua è un modo leggero e rinfrescante per fare esercizio. Questo corso è perfetto per l&#039;estate e si tiene ogni lunedì e gioveddì alle 14:00.</column>
+            <column name="partecipanti">12</column>
+            <column name="orario">2023-10-16 14:00:00</column>
+        </table>
+        <table name="corso">
+            <column name="id_corso">32</column>
+            <column name="nome">Tai Chi</column>
+            <column name="tipologia">Arti Marziali</column>
+            <column name="descrizione">Il Tai Chi è un&#039;antica pratica cinese che combina movimenti lenti e respirazione profonda. Questo corso promuove la calma e l&#039;equilibrio. Unisciti a noi ogni martedì e gioveddì alle 15:30 per migliorare la tua salute mentale e fisica.</column>
+            <column name="partecipanti">14</column>
+            <column name="orario">2023-10-17 15:30:00</column>
+        </table>
+        <table name="corso">
+            <column name="id_corso">33</column>
+            <column name="nome">Kickboxing Fitness</column>
+            <column name="tipologia">Arti Marziali</column>
+            <column name="descrizione">Il Kickboxing Fitness è un mix di kickboxing e fitness. Brucia calorie e sfoga lo stress mentre impari le tecniche di combattimento. Lezioni disponibili ogni mercoledì e venerdì alle 19:30.</column>
+            <column name="partecipanti">20</column>
+            <column name="orario">2023-10-18 19:30:00</column>
+        </table>
+        <table name="corso">
+            <column name="id_corso">51</column>
+            <column name="nome">Funzionale Over 60 </column>
+            <column name="tipologia">Funzionale</column>
+            <column name="descrizione">Allenamento completo, riabilitazione e movimento </column>
+            <column name="partecipanti">21</column>
+            <column name="orario">2024-02-05 12:30:00</column>
+        </table>
+        <table name="corso">
+            <column name="id_corso">52</column>
+            <column name="nome">Funzionale Over 80</column>
+            <column name="tipologia">Funzionale</column>
+            <column name="descrizione">Allenamento completo, riabilitazione e movimento </column>
+            <column name="partecipanti">12</column>
+            <column name="orario">2024-04-02 09:30:00</column>
+        </table>
+        <table name="corso">
+            <column name="id_corso">56</column>
+            <column name="nome">Karate Do</column>
+            <column name="tipologia">Arti Marziali</column>
+            <column name="descrizione">Arte Marziale Giapponese, combattimento di difesa.</column>
+            <column name="partecipanti">10</column>
+            <column name="orario">2024-04-02 09:30:00</column>
+        </table>
+        <table name="corso">
+            <column name="id_corso">57</column>
+            <column name="nome">Funzionale Over 90 </column>
+            <column name="tipologia">Funzionale</column>
+            <column name="descrizione">Allenamento completo, riabilitazione e movimento </column>
+            <column name="partecipanti">24</column>
+            <column name="orario">2024-03-06 10:30:00</column>
+        </table>
+        <!-- Tabella utenti -->
+        <table name="utenti">
+            <column name="id_utente">13</column>
+            <column name="username">Amministratore</column>
+            <column name="password">Amministratore1</column>
+            <column name="nome">Francesco</column>
+            <column name="cognome">Lazzarotto</column>
+            <column name="mail">admin@gmail.com</column>
+            <column name="data_nascita">2023-10-11</column>
+            <column name="amministratore">1</column>
+        </table>
+        <table name="utenti">
+            <column name="id_utente">17</column>
+            <column name="username">c</column>
+            <column name="password">c</column>
+            <column name="nome">c</column>
+            <column name="cognome">c</column>
+            <column name="mail">checco@gmail.com</column>
+            <column name="data_nascita">2023-10-19</column>
+            <column name="amministratore">0</column>
+        </table>
+        <table name="utenti">
+            <column name="id_utente">19</column>
+            <column name="username">utente1</column>
+            <column name="password">password1</column>
+            <column name="nome">Mario</column>
+            <column name="cognome">Rossi</column>
+            <column name="mail">mario@example.com</column>
+            <column name="data_nascita">1990-01-01</column>
+            <column name="amministratore">0</column>
+        </table>
+        <table name="utenti">
+            <column name="id_utente">20</column>
+            <column name="username">utente2</column>
+            <column name="password">password2</column>
+            <column name="nome">Laura</column>
+            <column name="cognome">Bianchi</column>
+            <column name="mail">laura@example.com</column>
+            <column name="data_nascita">1985-03-15</column>
+            <column name="amministratore">0</column>
+        </table>
+        <table name="utenti">
+            <column name="id_utente">21</column>
+            <column name="username">utente3</column>
+            <column name="password">password3</column>
+            <column name="nome">Carlo</column>
+            <column name="cognome">Verdi</column>
+            <column name="mail">carlo@example.com</column>
+            <column name="data_nascita">1988-07-22</column>
+            <column name="amministratore">0</column>
+        </table>
+        <table name="utenti">
+            <column name="id_utente">22</column>
+            <column name="username">utente4</column>
+            <column name="password">password4</column>
+            <column name="nome">Sofia</column>
+            <column name="cognome">Neri</column>
+            <column name="mail">sofia@example.com</column>
+            <column name="data_nascita">1995-11-10</column>
+            <column name="amministratore">0</column>
+        </table>
+        <table name="utenti">
+            <column name="id_utente">23</column>
+            <column name="username">utente5</column>
+            <column name="password">password5</column>
+            <column name="nome">Giulio</column>
+            <column name="cognome">Gialli</column>
+            <column name="mail">giulio@example.com</column>
+            <column name="data_nascita">1980-05-05</column>
+            <column name="amministratore">0</column>
+        </table>
+        <table name="utenti">
+            <column name="id_utente">24</column>
+            <column name="username">FraLazza</column>
+            <column name="password">basket01</column>
+            <column name="nome">Francesco </column>
+            <column name="cognome">Lazzarotto</column>
+            <column name="mail">fralazza@gmail.com</column>
+            <column name="data_nascita">1998-05-23</column>
+            <column name="amministratore">0</column>
+        </table>
+        <table name="utenti">
+            <column name="id_utente">25</column>
+            <column name="username">FrancescoLazzarotto</column>
+            <column name="password">Basket01</column>
+            <column name="nome">Francesco</column>
+            <column name="cognome">Lazzarotto</column>
+            <column name="mail">france@gmail.com</column>
+            <column name="data_nascita">2001-05-15</column>
+            <column name="amministratore">0</column>
+        </table>
+    </database>
+</pma_xml_export>
