@@ -15,6 +15,8 @@ Dynamic Content:
 Automatic Database Integration: The site dynamically generates content based on MySQL database entries, ensuring that course schedules, user interactions, and assistance records remain up-to-date.
 This Gym Management System provides an interactive and user-friendly experience, enhancing both member engagement and administrative efficiency in course and assistance management.
 
+Vote: 30 Lode
+
 
 
 
